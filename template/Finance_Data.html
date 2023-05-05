@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>Finance Data</title>
+<style>
+  body{
+    background-color:  #C0F6F4   ;
+   }
+   h2{
+    text-align:center;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    margin-bottom:30px;
+   }
+   form{
+   align:center;
+   margin:10px 380px 20px;
+   }
+   hr{
+	border-color:grey;
+	border-style:dotted;
+	border-width:7px;
+	width:10%;
+	border-bottom:none;
+	border-right:none;
+	border-left:none;
+    }
+    button{
+    margin-left:20px;
+    }
+
+
+</style>
+</head>
+<body>
+<h2 >Get all companies stock data for a particular date</h2>
+<form class="fixed-top" method="GET" action="/all_stock_data_for_date">
+  <label id="lables1" for="date">Date:</label>
+  <input type="text" name="date" id="date" placeholder="YYYY-MM-DD" required>
+  <button class="btn btn-primary" type="submit">Check</button>
+</form>
+
+<br><hr><br>
+
+<h2>Get all stock data for a particular company for a particular date</h2>
+<form method="GET" action="/stock_data_for_company_and_date">
+  <label class="lables1" for="company">Company:</label>
+  <input type="text" name="company" id="company" placeholder="Company Name" required>
+  <br><br>
+  <label class="lables" for="date">Date:</label>
+  <input type="text" name="date" id="date" placeholder="YYYY-MM-DD" required>
+  <br><br>
+  <button type="submit" class="btn btn-primary">Check</button>
+</form>
+
+<br><hr><br>
+
+<h2>Get all stock data for a particular company</h2>
+<form method="GET" action="/stock_data_for_company">
+  <label class="lables" for="company">Company:</label>
+  <input type="text" name="company" id="company" placeholder="Company Name" required>
+  <button type="submit" class="btn btn-primary">Check</button>
+</form>
+
+<br><hr><br>
+
+<h2>Update stock data for a company by date</h2>
+<form method="POST" action="/update_stock_data_for_company_by_date">
+  <label class="lables" for="company">Company:</label>
+  <input type="text" name="company" id="company" placeholder="Company Name" required>
+  <br><br>
+  <label class="lables" for="date">Date:</label>
+  <input type="text" name="date" id="date" placeholder="YYYY-MM-DD" required>
+  <br><br>
+  <label class="lables" for="open">Open:</label>
+  <input type="text" name="open" id="open" required>
+  <br><br>
+  <label class="lables" for="high">High:</label>
+  <input type="text" name="high" id="high" required>
+  <br><br>
+  <label class="lables" for="low">Low:</label>
+  <input type="text" name="low" id="low" required>
+  <br><br>
+  <label class="lables" for="close">Close:</label>
+  <input type="text" name="close" id="close" required>
+  <br><br>
+  <label class="lables" for="volume">Volume:</label>
+  <input type="text" name="volume" id="volume" required>
+  <br><br>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+</body>
+</html>
